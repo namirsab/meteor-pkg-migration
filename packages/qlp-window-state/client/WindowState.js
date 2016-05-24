@@ -1,6 +1,6 @@
-let height = new ReactiveVar(window.outerHeight);
-let width = new ReactiveVar(window.outerWidth);
-var $window = $(window);
+const height = new ReactiveVar(window.outerHeight);
+const width = new ReactiveVar(window.outerWidth);
+const $window = $(window);
 
 Meteor.startup(() => {
     $window.resize(function() {
@@ -9,7 +9,7 @@ Meteor.startup(() => {
     });
 });
 
-
+// Global Symbol necessary to export it
 WindowState = {
     isMaximized() {
             const currentHeight = height.get();
