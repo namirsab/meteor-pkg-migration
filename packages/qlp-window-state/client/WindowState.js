@@ -6,7 +6,7 @@ Meteor.startup(() => {
     $window.resize(function () {
         height.set(window.outerHeight);
         width.set(window.outerWidth);
-    });    
+    });
 });
 
 
@@ -18,5 +18,8 @@ WindowState = {
         const availWidth = screen.availWidth * 0.9;
 
         return !(currentHeight < availHeight || currentWidth < availWidth)
-    }
+    },
+
+    height: () => height.get(),
+    width: () => width.get()
 };
