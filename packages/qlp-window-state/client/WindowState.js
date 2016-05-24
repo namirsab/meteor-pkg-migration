@@ -1,3 +1,6 @@
+import { ReactivVar} from 'meteor/reactive-var';
+import { jQuery as $} from 'meteor/jquery'; // Note we import everything now
+
 let height = new ReactiveVar(window.outerHeight);
 let width = new ReactiveVar(window.outerWidth);
 var $window = $(window);
@@ -9,17 +12,21 @@ Meteor.startup(() => {
     });
 });
 
-
-WindowState = {
+// The symbol is not global anymore
+const WindowState = {
     isMaximized() {
         const currentHeight = height.get();
         const currentWidth = width.get();
         const availHeight = screen.availHeight * 0.9;
         const availWidth = screen.availWidth * 0.9;
 
-        return !(currentHeight < availHeight || currentWidth < availWidth)
+        return !(currentHeight < availHeight || currentWidth < availWidth);
     },
 
     height: () => height.get(),
     width: () => width.get()
+};
+
+export {
+    WindowState
 };

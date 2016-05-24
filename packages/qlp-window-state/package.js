@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('1.2.0.2');
+    api.versionsFrom('1.3.2.4');
 
     api.use([
         'ecmascript'
@@ -23,8 +23,8 @@ Package.onUse(function (api) {
         'templating'
     ], 'client');
 
-    api.addFiles('client/WindowState.js', 'client');
     api.addFiles('client/helpers.js', 'client');
     // Export the Global Symbol we've defined in client/WindowState.js
-    api.export('WindowState');
+    // Now we export it with api.mainModule
+    api.mainModule('client/WindowState.js', 'client');
 });
