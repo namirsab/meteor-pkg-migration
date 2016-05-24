@@ -2,10 +2,13 @@ let height = new ReactiveVar(window.outerHeight);
 let width = new ReactiveVar(window.outerWidth);
 var $window = $(window);
 
-$window.resize(function () {
-    height.set(window.outerHeight);
-    width.set(window.outerWidth);
+Meteor.startup(() => {
+    $window.resize(function () {
+        height.set(window.outerHeight);
+        width.set(window.outerWidth);
+    });    
 });
+
 
 WindowState = {
     isMaximized() {
