@@ -1,4 +1,4 @@
-import { ReactivVar} from 'meteor/reactive-var';
+import { ReactiveVar} from 'meteor/reactive-var';
 import { jQuery as $} from 'meteor/jquery'; // Note we import everything now
 
 const height = new ReactiveVar(window.outerHeight);
