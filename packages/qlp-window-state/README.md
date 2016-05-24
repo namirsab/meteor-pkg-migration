@@ -2,7 +2,6 @@
 Allows to detect reactively when the window is maximized
 ## Usage
 ### Javascript
-`WindowState.isMaximized()` once you've added your package.
-### Helper
-It adds a global helper `windowIsMaximized` you can use in your Blaze Templates.
- 
+`WindowState.isMaximized()` once you've added your package.  
+`WindowState.height()` to get the window height reactively.  
+`WindowState.width()` to get the window width reactively.  

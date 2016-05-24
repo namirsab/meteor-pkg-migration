@@ -1,9 +1,9 @@
 import { ReactivVar} from 'meteor/reactive-var';
 import { jQuery as $} from 'meteor/jquery'; // Note we import everything now
 
-let height = new ReactiveVar(window.outerHeight);
-let width = new ReactiveVar(window.outerWidth);
-var $window = $(window);
+const height = new ReactiveVar(window.outerHeight);
+const width = new ReactiveVar(window.outerWidth);
+const $window = $(window);
 
 Meteor.startup(() => {
     $window.resize(function () {

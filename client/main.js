@@ -5,10 +5,7 @@ import { WindowState } from 'meteor/qlp:qlp-window-state';
 import './main.html';
 
 Template.body.helpers({
-    height() {
-        return WindowState.height();
-    },
-    width() {
-        return WindowState.width();
-    }
+    windowIsMaximized: () => WindowState.isMaximized(),
+    height: () => WindowState.height(),
+    width: () => WindowState.width()
 });
