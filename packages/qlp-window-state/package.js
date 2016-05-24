@@ -20,7 +20,6 @@ Package.onUse(function (api) {
     api.use([
         'jquery',
         'reactive-var',
-        'templating'
     ], 'client');
 
     api.addFiles('client/WindowState.js', 'client');
