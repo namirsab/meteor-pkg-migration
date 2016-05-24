@@ -27,6 +27,7 @@ const WindowState = {
     width: () => width.get()
 };
 
+// We export it using ES6 exports
 export {
     WindowState
 };
