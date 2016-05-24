@@ -17,7 +17,7 @@ WindowState = {
         const availHeight = screen.availHeight * 0.9;
         const availWidth = screen.availWidth * 0.9;
 
-        return !(currentHeight < availHeight || currentWidth < availWidth)
+        return !(currentHeight < availHeight || currentWidth < availWidth);
     },
 
     height: () => height.get(),
