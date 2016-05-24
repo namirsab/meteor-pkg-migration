@@ -25,5 +25,6 @@ Package.onUse(function (api) {
 
     api.addFiles('client/WindowState.js', 'client');
     api.addFiles('client/helpers.js', 'client');
+    // Export the Global Symbol we've defined in client/WindowState.js
     api.export('WindowState');
 });
